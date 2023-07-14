@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * Description: A c program that prints the alphabet in lowercase except q and e
+ * Description: A c program that prints the alphabet in lowercase except
+ * q and e.
  * Return: Always 0 (Success)
  */
 
