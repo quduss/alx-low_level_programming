@@ -1,7 +1,7 @@
 /**
  * _isupper - checks if input is uppercase
- * @c: char input
- * Return: 1 if uppercase and 0 if lowercase
+ * @c: integer input
+ * Return: 1 if uppercase and 0 otherwise
  */
  int _isupper(int c)
 {
