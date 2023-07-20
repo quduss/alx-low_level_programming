@@ -1,5 +1,5 @@
 /**
- * isupper - checks if input is uppercase
+ * _isupper - checks if input is uppercase
  * @c: char input
  * Return: 1 if uppercase and 0 if lowercase
  */
