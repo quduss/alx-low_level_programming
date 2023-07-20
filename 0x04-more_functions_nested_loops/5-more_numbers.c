@@ -15,13 +15,9 @@ void more_numbers(void)
 		b = 0;
 		while (b < 15)
 		{
-			if (b / 10 == 0)
-				_putchar(b + '0');
-			else
-			{
-				_putchar((b / 10) + '0');
-				_putchar((b % 10) + '0');
-			}
+			if ((b / 10) == 1)
+				_putchar(1 + '0');
+			_putchar((b % 10) + '0');
 			b++;
 		}
 		_putchar('\n');
