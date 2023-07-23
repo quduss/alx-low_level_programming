@@ -6,9 +6,9 @@
 
 int main(void)
 {
-	int a;
+	long a;
 
-	a = 204284158381
-	printf("%d\n", a);
+	a = 204284158381;
+	printf("%ld\n", a);
 	return (0);
 }
