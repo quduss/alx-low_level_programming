@@ -4,22 +4,16 @@
  * @s: string input to reverse
  */
 
-int _strlen(char *s)
-{
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
 void print_rev(char *s)
 {
+	int j;
 	int len;
 	int i;
 
-	len = _strlen(s);
+	j = 0;
+	while (s[j] != '\0')
+		j++;
+	len = j;
 	i = len - 1;
 	while (i >= 0)
 	{
