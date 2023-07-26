@@ -2,6 +2,7 @@
  * _strncpy - copies at most n bytes from src to dest
  * @dest: destination string
  * @src: source string
+ * @n: number of bytes from src to be copied
  * Return: pointer to dest string
  */
 
