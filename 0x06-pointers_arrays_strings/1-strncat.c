@@ -1,4 +1,3 @@
-#include <stddef.h>
 /**
  * _strncat - concatenates at most n bytes from src to dest
  * @dest: destination string
