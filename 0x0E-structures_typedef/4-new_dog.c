@@ -12,16 +12,12 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
-	char *name_copy;
-	char *owner_copy;
 
-	name_copy = strdup(name);
-	owner_copy = strdup(owner);
 	dog = malloc(sizeof(dog_t));
 	if (dog == NULL)
 		return (NULL);
-	dog->name = name_copy;
+	dog->name = strdup(name);
 	dog->age = age;
-	dog->owner = owner_copy;
+	dog->owner = strdup(owner);
 	return (dog);
 }
