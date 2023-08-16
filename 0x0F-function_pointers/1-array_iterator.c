@@ -1,7 +1,7 @@
 #include <stdlib.h>
 /**
  * array_iterator - executes a function on each element of an array of ints
- * @array - array of integers
+ * @array: array of integers
  * @size: size of the array
  * @action: pointer to the function to execute
  */
