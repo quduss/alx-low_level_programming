@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	a = get_op_func(argv[2]);
-	printf("%d\n", a(atoi(argv[1]), atoi(argv[3])));
+	if (a != NULL)
+		printf("%d\n", a(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
