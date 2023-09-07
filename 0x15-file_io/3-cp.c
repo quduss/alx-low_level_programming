@@ -53,12 +53,12 @@ int main(int ac, char **av)
 	}
 	if (close(fd_from) < 0)
 	{
-		dprintf(2, "Error: Can't close fd %i\n", fd_from)
+		dprintf(2, "Error: Can't close fd %i\n", fd_from);
 		exit(100);
 	}
 	if (close(fd_to) < 0)
 	{
-		dprintf(2, "Error: Can't close fd %i\n", fd_to)
+		dprintf(2, "Error: Can't close fd %i\n", fd_to);
 		exit(100);
 	}
 	free(buf);
