@@ -16,7 +16,7 @@ int main(int ac, char **av)
 
 	buf = malloc(sizeof(char) * 1024);
 	if (buf == NULL)
-		return (1);
+		return (0);
 	if (ac != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
