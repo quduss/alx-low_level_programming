@@ -16,50 +16,50 @@ int main(int ac, char **av)
 
 	buf = malloc(sizeof(char) * 1024);
 	if (buf == NULL)
-		return (0);
+		return (1);
 	if (ac != 3)
 	{
-		exit(97);
 		dprintf(2, "Usage: cp file_from file_to\n");
+		exit(97);
 	}
 	fd_from = open(av[1], O_RDONLY);
 	if (fd_from < 0)
 	{
-		exit(98);
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+		exit(98);
 	}
-	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
+	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to < 0)
 	{
-		exit(99);
 		dprintf(2, "Error: Can't write to %s\n", av[2]);
+		exit(99);
 	}
 	while (1)
 	{
 		r = read(fd_from, buf, 1024);
 		if (r < 0)
 		{
-			exit(98);
 			dprintf(2, "Error: Can't read from file %s\n", av[1]);
+			exit(98);
 		}
 		w = write(fd_to, buf, r);
 		if (w < 0)
 		{
-			exit(99);
 			dprintf(2, "Error: Can't write to %s\n", av[2]);
+			exit(99);
 		}
 		if (r < 1024)
 			break;
 	}
 	if (close(fd_from) < 0)
 	{
+		dprintf(2, "Error: Can't close fd %i\n", fd_from)
 		exit(100);
-		dprintf(2, "Error: Can't close fd %i\n", fd_from);
 	}
 	if (close(fd_to) < 0)
 	{
+		dprintf(2, "Error: Can't close fd %i\n", fd_to)
 		exit(100);
-		dprintf(2, "Error: Can't close fd %i\n", fd_to);
 	}
 	free(buf);
 	return (0);
