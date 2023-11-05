@@ -6,7 +6,7 @@
  * @ht: pointer to the hash table
  * Return: new hash_node if successful or NULL otherwise
  */
-hash_node_t *add_hash_beginning(hash_table_t *ht, const char *key, const char *value)
+hash_node_t *add_hash_top(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int ki = key_index((unsigned char *)key, ht->size);
 	hash_node_t *ptr = malloc(sizeof(hash_node_t));
@@ -33,13 +33,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int ki;
 	hash_node_t *head, *ptr;
 
-	if (strlen(key) == 0)
+	if (key == NULL || strlen(key) == 0)
 		return (0);
 	ki = key_index((unsigned char *)key, ht->size);
 	head = ht->array[ki];
 	if (head == NULL)
 	{
-		ptr = add_hash_beginning(ht, key, value);
+		ptr = add_hash_top(ht, key, value);
 		if (ptr == NULL)
 			return (0);
 		return (1);
@@ -53,7 +53,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		head = head->next;
 	}
-	ptr = add_hash_beginning(ht, key, value);
+	ptr = add_hash_top(ht, key, value);
 	if (ptr == NULL)
 		return (0);
 	return (1);
