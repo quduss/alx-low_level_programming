@@ -30,11 +30,9 @@ hash_node_t *add_hash_beginning(hash_table_t *ht, const char *key, const char *v
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int ki, i;
+	unsigned long int ki;
 	hash_node_t *head, *ptr;
 
-	for (i = 0; i < ht->size; i++)
-		ht->array[i] = NULL;
 	if (strlen(key) == 0)
 		return (0);
 	ki = key_index((unsigned char *)key, ht->size);
@@ -53,6 +51,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			head->value = strdup(value);
 			return (1);
 		}
+		head = head->next;
 	}
 	ptr = add_hash_beginning(ht, key, value);
 	if (ptr == NULL)
