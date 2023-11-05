@@ -30,9 +30,11 @@ hash_node_t *add_hash_beginning(hash_table_t *ht, const char *key, const char *v
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int ki;
+	unsigned long int ki, i;
 	hash_node_t *head, *ptr;
 
+	for (i = 0; i < ht->size; i++)
+		ht->array[i] = NULL;
 	if (strlen(key) == 0)
 		return (0);
 	ki = key_index((unsigned char *)key, ht->size);
