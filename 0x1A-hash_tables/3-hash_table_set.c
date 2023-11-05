@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
- * add_hash_beginning - adds new hash_node_t to the beginning of list
+ * add_hash_top - adds new hash_node_t to the beginning of list
  * @key: key
  * @value: value associated with key
  * @ht: pointer to the hash table
@@ -30,11 +30,11 @@ hash_node_t *add_hash_top(hash_table_t *ht, const char *key, const char *value)
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
+	if (!ht || !key || strlen(key) == 0)
+		return (0);
 	unsigned long int ki;
 	hash_node_t *head, *ptr;
 
-	if (key == NULL || strlen(key) == 0)
-		return (0);
 	ki = key_index((unsigned char *)key, ht->size);
 	head = ht->array[ki];
 	if (head == NULL)
