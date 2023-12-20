@@ -1,4 +1,7 @@
-all:
-	$(CC) $(SRC) -o school
+# make binary file named school from all .c files present
+
 CC = gcc
 SRC := $(wildcard *.c)
+
+all: $(SRC)
+	$(CC) $(SRC) -o school
