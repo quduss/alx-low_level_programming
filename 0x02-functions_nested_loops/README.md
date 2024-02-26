@@ -11,6 +11,11 @@ This directory is used to test understanding of the following concepts:
 7. **6-abs.c** - `C` function that computes the absolute value of an integer.
 8. **7-print_last_digit.c** - `C` function that prints the last digit of a number.
 9. **8-24_hours.c** - `C` function that prints every minute of the day starting from 00:00 to 23:59.
-10. **9-times_table.c** - C function that prints the 9 times table, starting with 0.
+10. **9-times_table.c** - `C` function that prints the 9 times table, starting with 0.
+11. **10-add.c** - `C` function that adds two integers and returns the result.
+12. **11-print_to_98.c** - `C` function that prints all natural numbers from n to 98, followed by a new line.
+13. **100-times_table.c** - `C` function that prints the n times table, starting with 0. The function doesn't print anything if n is greater than 15 or less than 0.
+14. **101-natural.c** - `C` program that computes and prints the sum of all the multiples of 3 or 5 below 1024 (excluded), followed by a new line.
+15. 
 
 
