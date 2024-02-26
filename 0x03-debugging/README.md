@@ -1,1 +1,2 @@
-#0X03_DEBUGGING
+# 0X03_DEBUGGING
+This is a C project to test understanding of debugging.
