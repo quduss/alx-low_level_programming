@@ -1,5 +1,5 @@
 # 0X05-POINTERS_ARRAYS_STRINGS
-This directory is used to test knowledge on the following concepts
+This directory is used to test knowledge on the following concepts in `C` language.
 - **Pointers**
 - **Arrays**
 - **Strings**
