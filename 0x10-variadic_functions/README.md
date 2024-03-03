@@ -1,3 +1,3 @@
 # 0x10-variadic_functions
-hhh
+This directory tests understanding of variadic functions in `C`.
 
