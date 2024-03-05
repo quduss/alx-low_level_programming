@@ -1,5 +1,5 @@
 # 0x15-file_io
-This directory tests understanding of file descriptors and the following functions:
+This directory tests understanding of how to create a file, open a file, write to a file, and read from a file. It also tests understanding of the following functions:
 - open
 - close
 - read
