@@ -25,11 +25,12 @@ unsigned long int get_length(const hash_table_t *ht)
 
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int i, idx = 0, len = get_length(ht);
+	unsigned long int i, idx = 0, len;
 	hash_node_t *ptr;
 
 	if (ht == NULL)
 		return;
+	len = get_length(ht)
 	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
