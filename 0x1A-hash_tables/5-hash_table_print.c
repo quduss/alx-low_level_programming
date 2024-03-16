@@ -30,7 +30,7 @@ void hash_table_print(const hash_table_t *ht)
 
 	if (ht == NULL)
 		return;
-	len = get_length(ht)
+	len = get_length(ht);
 	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
