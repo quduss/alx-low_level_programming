@@ -60,7 +60,8 @@ int binarySearch(int arr[], int l, int r, int x)
 }
 
 /**
- * binary_search - function that searches for a value in a sorted array of integers
+ * binary_search - function that searches for a value in
+ * a sorted array of integers
  * using the Binary search algorithm.
  * @array: pointer to the first element of array
  * @size: size of the array
